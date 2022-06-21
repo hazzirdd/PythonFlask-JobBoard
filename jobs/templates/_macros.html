@@ -8,18 +8,20 @@
     <div class="card-content">
       <div class="content">
         <p>
-            <a>{{ job['employer_name'] }}<br>${{ job['salary'] }}<br>{{ job['description'] }}</a>
+            <a>{{ job['employer_name'] }}</a><br>
+            ${{ job['salary'] }}<br>
+            {{ job['description'] }}
         </p>
       </div>
     </div>
   </div>
 {% endmacro %}
 
-{% show_jobs(jobs) %}
+{% macro show_jobs(jobs) %}
 <div class="columns" class="is-multiline">
     {% for job in jobs: %}
         <div class="column" class="is-half">
-            {% show_job(job) %}
+            {{ show_job(job) }}
         </div>
     {% endfor %}
 </div>
