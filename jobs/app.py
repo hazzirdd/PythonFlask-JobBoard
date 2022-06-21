@@ -1,4 +1,3 @@
-from asyncio import open_connection
 from flask import Flask, render_template, g
 import sqlite3
 
